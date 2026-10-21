@@ -1,0 +1,28 @@
+{
+  "$schema": "https://living-code.dev/port.schema.json",
+  "schemaVersion": 1,
+  "name": "Aider",
+  "slug": "aider",
+  "group": "AI & Agents",
+  "emoji": "🛠️",
+  "description": "Living Code for Aider: native YAML colors for user and assistant messages, warnings, errors and completion-menu states.",
+  "homepage": "https://aider.chat",
+  "quick": "Install the native theme files",
+  "aliases": [
+    "aider chat",
+    "aider ai"
+  ],
+  "flavors": [
+    "night",
+    "frost",
+    "paper",
+    "signal"
+  ],
+  "files": [
+    "themes/living-code-night.yml",
+    "themes/living-code-frost.yml",
+    "themes/living-code-paper.yml",
+    "themes/living-code-signal.yml"
+  ],
+  "images": []
+}

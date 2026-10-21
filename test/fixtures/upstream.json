@@ -1,0 +1,20 @@
+{
+  "repository": "Aider-AI/aider",
+  "revision": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "paths": [
+    "aider/args.py"
+  ],
+  "checked": "2026-10-21",
+  "contract": "yaml",
+  "colors": [
+    "user-input-color",
+    "tool-output-color",
+    "tool-error-color",
+    "tool-warning-color",
+    "assistant-output-color",
+    "completion-menu-color",
+    "completion-menu-bg-color",
+    "completion-menu-current-color",
+    "completion-menu-current-bg-color"
+  ]
+}

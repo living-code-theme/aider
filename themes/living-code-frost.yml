@@ -1,0 +1,10 @@
+# Merge these color settings into .aider.conf.yml, or use aider --config <this-file>.
+user-input-color: "#43a997"
+tool-output-color: "#9ba0a2"
+tool-error-color: "#d68079"
+tool-warning-color: "#e9c897"
+assistant-output-color: "#e2e9ee"
+completion-menu-color: "#e2e9ee"
+completion-menu-bg-color: "#10171c"
+completion-menu-current-color: "#e2e9ee"
+completion-menu-current-bg-color: "#333c43"
