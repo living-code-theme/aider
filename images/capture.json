@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "scene": "Aider native command/help UI in a tiny fixture Git repository. No model request.",
+  "inputs": {
+    "capture/app.py": "fb02a92fb65cf0246a5618ad5070190ea8b926d66148d9a84dd0ce1b3df3f2f5",
+    "capture/config.json": "eaf704c6b3c88ce880db1f82275d6e3deca907e0f63f3f456d5ca801a078195f",
+    "capture/flake.lock": "e3750f7ba25d0b1971722cdd83b2f07e32528980a4d6a9a1ea55177747de5752",
+    "capture/flake.nix": "89d8a75cc7b78e78c854b89d9219e15397f834f7ab3b898264374a67ccc6dccf",
+    "palette/theme.json": "d735cf005e3b2807953226c0119e384f6f8a3d2b3167443371cb302a8c689cdb",
+    "port.json": "985af7aba637f10b655196c66b72495e9926894a0233f906fd8317e3aa09118a",
+    "scripts/capture.py": "6830da447e48a4ab5511012b5222763677214e8a98683b94c60248765202ca9f",
+    "themes/living-code-frost.yml": "17e0c035420194ce39f601d626513f8f42676ce30afde31716c1a2fa7b14a8fa",
+    "themes/living-code-night.yml": "aafe08f4e51935c7596e47ac2bba1c968eae8b3d7d11142145f85f7fa9f349de",
+    "themes/living-code-paper.yml": "6424255ee9915f43d54658d506deb3aebaa23ea3e3b449783772de9c1adc523c",
+    "themes/living-code-signal.yml": "a279c56aaa90d3899cb4fb2a46afe5f34be1b607bb550507458049bb40bdedee"
+  },
+  "images": {
+    "night": {
+      "path": "images/night.png",
+      "sha256": "d484742b1044897b2e9b1916c85a712af7d2eb34a1c4e5cb5797fc3bfec59669",
+      "application": "aider 0.86.1",
+      "paletteColors": [
+        "#00a692",
+        "#05080b",
+        "#8acb83",
+        "#9ba0a2",
+        "#e2e9ee"
+      ]
+    },
+    "frost": {
+      "path": "images/frost.png",
+      "sha256": "c62dd700edf11cf30e14f42fcdb18f59b659509d12c68d19d91d6b67c9eb8ad8",
+      "application": "aider 0.86.1",
+      "paletteColors": [
+        "#0a1016",
+        "#43a997",
+        "#9ba0a2",
+        "#a2cb9d",
+        "#e2e9ee"
+      ]
+    },
+    "paper": {
+      "path": "images/paper.png",
+      "sha256": "aac04e8fbe195300f4d1317b66e4de601bdd06abec0c37aca803c1e693cd8ce0",
+      "application": "aider 0.86.1",
+      "paletteColors": [
+        "#12171a",
+        "#187d6e",
+        "#3b7a35",
+        "#50565a",
+        "#f4f7f9"
+      ]
+    },
+    "signal": {
+      "path": "images/signal.png",
+      "sha256": "31734b940421b6bbff0daa4ce393ff92789cd0c8e88d9f16b0ec24d819a3c73b",
+      "application": "aider 0.86.1",
+      "paletteColors": [
+        "#00a692",
+        "#05080b",
+        "#9ba0a2",
+        "#c8cfd4",
+        "#e2e9ee"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "downloads": [
+    {
+      "source": "themes/living-code-{flavor}.yml",
+      "destination": "{config}/aider/themes/living-code-{flavor}.yml"
+    }
+  ]
+}

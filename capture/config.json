@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "scene": "Aider native command/help UI in a tiny fixture Git repository. No model request.",
+  "versionCommand": [
+    "aider",
+    "--version"
+  ],
+  "fixtures": []
+}

@@ -24,5 +24,10 @@
     "themes/living-code-paper.yml",
     "themes/living-code-signal.yml"
   ],
-  "images": []
+  "images": [
+    { "flavor": "night", "path": "images/night.png", "alt": "Aider running Living Code Night" },
+    { "flavor": "frost", "path": "images/frost.png", "alt": "Aider running Living Code Frost" },
+    { "flavor": "paper", "path": "images/paper.png", "alt": "Aider running Living Code Paper" },
+    { "flavor": "signal", "path": "images/signal.png", "alt": "Aider running Living Code Signal" }
+  ]
 }

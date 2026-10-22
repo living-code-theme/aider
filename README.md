@@ -7,22 +7,40 @@
 
 ## Previews
 
-Real application screenshots have not been captured yet.
+<table data-lc-flavors>
+<tr>
+<td width="50%" valign="top">
+<strong>Night</strong><br><sub>Dark · full palette</sub><br><br>
+<a href="images/night.png"><img src="images/night.png" alt="Aider running Living Code Night" width="640"></a>
+</td>
+<td width="50%" valign="top">
+<strong>Frost</strong><br><sub>Dark · softer chroma</sub><br><br>
+<a href="images/frost.png"><img src="images/frost.png" alt="Aider running Living Code Frost" width="640"></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<strong>Paper</strong><br><sub>Light · near-white slate</sub><br><br>
+<a href="images/paper.png"><img src="images/paper.png" alt="Aider running Living Code Paper" width="640"></a>
+</td>
+<td width="50%" valign="top">
+<strong>Signal</strong><br><sub>Dark · teal accent</sub><br><br>
+<a href="images/signal.png"><img src="images/signal.png" alt="Aider running Living Code Signal" width="640"></a>
+</td>
+</tr>
+</table>
+
+Select any preview to view the image at full size.
 
 ## Installation
 
 ```sh
-git clone https://github.com/living-code-theme/aider.git
-cd aider
+flavor=night # night, frost, paper, or signal
+curl -fsSL --create-dirs -o "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-$flavor.yml" "https://raw.githubusercontent.com/living-code-theme/aider/main/themes/living-code-$flavor.yml"
+aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-$flavor.yml"
 ```
 
-Try one flavor from this clone:
-
-```sh
-aider --config "$PWD/themes/living-code-night.yml"
-```
-
-For everyday use, merge the nine color settings from the selected file into your existing `~/.aider.conf.yml` or project `.aider.conf.yml`. Keep model, credentials and editing settings unchanged.
+This uses a separate color-only config instead of overwriting `~/.aider.conf.yml`. To keep all your existing Aider settings active together, merge the nine color options from the downloaded file into your user or project config. Preserve credentials, model and editing settings.
 
 ## Flavors
 
@@ -31,10 +49,10 @@ Expand a flavor for its full-size preview and activation instructions.
 <details data-lc-flavor="night">
 <summary><strong>Night</strong> · Dark · full palette</summary>
 
-A real application capture is not available yet.
+<p><a href="images/night.png"><img src="images/night.png" alt="Aider running Living Code Night" width="1280"></a></p>
 
 ```sh
-aider --config "$PWD/themes/living-code-night.yml"
+aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-night.yml"
 ```
 
 </details>
@@ -42,10 +60,10 @@ aider --config "$PWD/themes/living-code-night.yml"
 <details data-lc-flavor="frost">
 <summary><strong>Frost</strong> · Dark · softer chroma</summary>
 
-A real application capture is not available yet.
+<p><a href="images/frost.png"><img src="images/frost.png" alt="Aider running Living Code Frost" width="1280"></a></p>
 
 ```sh
-aider --config "$PWD/themes/living-code-frost.yml"
+aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-frost.yml"
 ```
 
 </details>
@@ -53,10 +71,10 @@ aider --config "$PWD/themes/living-code-frost.yml"
 <details data-lc-flavor="paper">
 <summary><strong>Paper</strong> · Light · near-white slate</summary>
 
-A real application capture is not available yet.
+<p><a href="images/paper.png"><img src="images/paper.png" alt="Aider running Living Code Paper" width="1280"></a></p>
 
 ```sh
-aider --config "$PWD/themes/living-code-paper.yml"
+aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-paper.yml"
 ```
 
 </details>
@@ -64,10 +82,10 @@ aider --config "$PWD/themes/living-code-paper.yml"
 <details data-lc-flavor="signal">
 <summary><strong>Signal</strong> · Dark · teal accent</summary>
 
-A real application capture is not available yet.
+<p><a href="images/signal.png"><img src="images/signal.png" alt="Aider running Living Code Signal" width="1280"></a></p>
 
 ```sh
-aider --config "$PWD/themes/living-code-signal.yml"
+aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-signal.yml"
 ```
 
 </details>
@@ -79,6 +97,8 @@ The files map exactly Aider’s nine documented `*-color` options. Do not combin
 ## Compatibility
 
 For Aider versions exposing the nine color flags listed in `test/fixtures/upstream.json`. This is a UI-color port, not a custom Pygments style. Aider’s rendered code blocks continue to use your configured `code-theme`; the terminal owns the full-screen background. Use a matching Living Code terminal theme for the rest of the palette. Tests parse native YAML and verify accepted flag names and semantic colors.
+
+Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn.
 
 ## Contributing
 
