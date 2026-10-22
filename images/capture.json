@@ -8,7 +8,7 @@
     "capture/flake.nix": "c2fba8c9b800f5f2ecfec74b2e8f86dd1d68fd0c9fdd6d16104876297ad7fad1",
     "palette/theme.json": "d735cf005e3b2807953226c0119e384f6f8a3d2b3167443371cb302a8c689cdb",
     "port.json": "985af7aba637f10b655196c66b72495e9926894a0233f906fd8317e3aa09118a",
-    "scripts/capture.py": "dcb8dc5d8a6ecbf2eb998eab90d678c745c9de6e9d35ded82edc0a949cb7e4e8",
+    "scripts/capture.py": "1fefb763f00567b795b92388b29e3e8c3fd58bd0eefa9c2f31e43663cad7a308",
     "themes/living-code-frost.yml": "17e0c035420194ce39f601d626513f8f42676ce30afde31716c1a2fa7b14a8fa",
     "themes/living-code-night.yml": "aafe08f4e51935c7596e47ac2bba1c968eae8b3d7d11142145f85f7fa9f349de",
     "themes/living-code-paper.yml": "6424255ee9915f43d54658d506deb3aebaa23ea3e3b449783772de9c1adc523c",
@@ -17,7 +17,7 @@
   "images": {
     "night": {
       "path": "images/night.png",
-      "sha256": "e9e25116b452fc39f4c5b1343f80cc46b7c7e4b5493e48ab4252b089451f244a",
+      "sha256": "6ead47b6580d456bf110c72de53ec441ba57e9208d8ecf9584d98b7dc9de0b38",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#00a692",
@@ -29,7 +29,7 @@
     },
     "frost": {
       "path": "images/frost.png",
-      "sha256": "4da985aadbfa82916498641bcf98b30578d93b1203b03b660f6e1f069151fb74",
+      "sha256": "861f6483402f0b12355066c30897859f2f4ea6c0ea6218ca9069db64020799c1",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#0a1016",
@@ -41,7 +41,7 @@
     },
     "paper": {
       "path": "images/paper.png",
-      "sha256": "c44bc275e8d94282269ebadbb6176635aa39308618faff5776154f13bcf40584",
+      "sha256": "d1961cc2ae07d08d8f478eadfd04f11d46895abc33df52b37f31ccb273885f5d",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#12171a",
@@ -53,7 +53,7 @@
     },
     "signal": {
       "path": "images/signal.png",
-      "sha256": "cf8ce6bfcb96ade9543f4768817f2a7fda57af308b6f1d7666f9969f59e83f36",
+      "sha256": "3046df9d2b4dd0081346011215a9dfdf03814c34be8e0333558682eb92c67216",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#00a692",
