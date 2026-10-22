@@ -5,10 +5,10 @@
     "capture/app.py": "fb02a92fb65cf0246a5618ad5070190ea8b926d66148d9a84dd0ce1b3df3f2f5",
     "capture/config.json": "eaf704c6b3c88ce880db1f82275d6e3deca907e0f63f3f456d5ca801a078195f",
     "capture/flake.lock": "e3750f7ba25d0b1971722cdd83b2f07e32528980a4d6a9a1ea55177747de5752",
-    "capture/flake.nix": "89d8a75cc7b78e78c854b89d9219e15397f834f7ab3b898264374a67ccc6dccf",
+    "capture/flake.nix": "c2fba8c9b800f5f2ecfec74b2e8f86dd1d68fd0c9fdd6d16104876297ad7fad1",
     "palette/theme.json": "d735cf005e3b2807953226c0119e384f6f8a3d2b3167443371cb302a8c689cdb",
     "port.json": "985af7aba637f10b655196c66b72495e9926894a0233f906fd8317e3aa09118a",
-    "scripts/capture.py": "6830da447e48a4ab5511012b5222763677214e8a98683b94c60248765202ca9f",
+    "scripts/capture.py": "dcb8dc5d8a6ecbf2eb998eab90d678c745c9de6e9d35ded82edc0a949cb7e4e8",
     "themes/living-code-frost.yml": "17e0c035420194ce39f601d626513f8f42676ce30afde31716c1a2fa7b14a8fa",
     "themes/living-code-night.yml": "aafe08f4e51935c7596e47ac2bba1c968eae8b3d7d11142145f85f7fa9f349de",
     "themes/living-code-paper.yml": "6424255ee9915f43d54658d506deb3aebaa23ea3e3b449783772de9c1adc523c",
@@ -17,7 +17,7 @@
   "images": {
     "night": {
       "path": "images/night.png",
-      "sha256": "d484742b1044897b2e9b1916c85a712af7d2eb34a1c4e5cb5797fc3bfec59669",
+      "sha256": "e9e25116b452fc39f4c5b1343f80cc46b7c7e4b5493e48ab4252b089451f244a",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#00a692",
@@ -29,7 +29,7 @@
     },
     "frost": {
       "path": "images/frost.png",
-      "sha256": "c62dd700edf11cf30e14f42fcdb18f59b659509d12c68d19d91d6b67c9eb8ad8",
+      "sha256": "4da985aadbfa82916498641bcf98b30578d93b1203b03b660f6e1f069151fb74",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#0a1016",
@@ -41,7 +41,7 @@
     },
     "paper": {
       "path": "images/paper.png",
-      "sha256": "aac04e8fbe195300f4d1317b66e4de601bdd06abec0c37aca803c1e693cd8ce0",
+      "sha256": "c44bc275e8d94282269ebadbb6176635aa39308618faff5776154f13bcf40584",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#12171a",
@@ -53,7 +53,7 @@
     },
     "signal": {
       "path": "images/signal.png",
-      "sha256": "31734b940421b6bbff0daa4ce393ff92789cd0c8e88d9f16b0ec24d819a3c73b",
+      "sha256": "cf8ce6bfcb96ade9543f4768817f2a7fda57af308b6f1d7666f9969f59e83f36",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#00a692",
