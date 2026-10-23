@@ -1,4 +1,5 @@
-# Merge these color settings into .aider.conf.yml, or use aider --config <this-file>.
+# Aider UI colors and the companion Living Code Pygments syntax style.
+code-theme: "living-code-paper"
 user-input-color: "#187d6e"
 tool-output-color: "#50565a"
 tool-error-color: "#a74541"

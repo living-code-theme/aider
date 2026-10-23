@@ -7,10 +7,12 @@ const fixture = JSON.parse(await readFile(new URL('./fixtures/upstream.json', im
 const read = path => readFile(new URL('../' + path, import.meta.url), 'utf8');
 import YAML from 'yaml';
 
-for (const f of resolveAll()) test(f.name + ': native YAML uses exactly Aider color flags', async () => {
+for (const f of resolveAll()) test(f.name + ': native YAML selects the matching syntax plugin and Aider color flags', async () => {
   const t = YAML.parse(await read('themes/' + f.slug + '.yml'));
-  keys(t, fixture.colors); hexColors(t);
-  assert.ok(!('code-theme' in t) && !('dark-mode' in t) && !('light-mode' in t));
+  const { 'code-theme': syntax, ...colors } = t;
+  keys(colors, fixture.colors); hexColors(colors);
+  assert.equal(syntax, f.slug);
+  assert.ok(!('dark-mode' in t) && !('light-mode' in t));
   assert.equal(t['user-input-color'], f.r('accent')); assert.equal(t['assistant-output-color'], f.r('fg'));
   assert.equal(t['tool-error-color'], f.r('error')); assert.equal(t['tool-warning-color'], f.r('warning'));
   assertContrast(t['completion-menu-color'], t['completion-menu-bg-color']);

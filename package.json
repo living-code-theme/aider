@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Living Code for Aider: native YAML colors for user and assistant messages, warnings, errors and completion-menu states.",
+  "description": "Living Code for Aider: native UI colors and Neovim-aligned code highlighting through a companion Pygments plugin.",
   "license": "MIT",
   "author": "Living Code",
   "repository": {
@@ -19,12 +19,12 @@
     "kind": "files"
   },
   "scripts": {
-    "build": "node scripts/generate.mjs",
+    "build": "node scripts/generate.mjs && python3 scripts/build-wheel.py",
     "check": "node scripts/check.mjs && python3 scripts/capture.py --check",
     "test": "node scripts/check.mjs && node --test test/*.test.mjs",
     "screenshots": "nix develop path:./capture --command python3 scripts/capture.py",
     "screenshots:check": "python3 scripts/capture.py --check",
-    "check:generated": "node scripts/generate.mjs --check",
+    "check:generated": "node scripts/generate.mjs --check && python3 scripts/build-wheel.py --check",
     "palette:update": "node scripts/update-palette.mjs",
     "package": "node scripts/package.mjs"
   },

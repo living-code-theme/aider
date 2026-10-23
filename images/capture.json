@@ -1,63 +1,88 @@
 {
   "schemaVersion": 1,
-  "scene": "Aider native command/help UI in a tiny fixture Git repository. No model request.",
+  "scene": "Aider native code-review conversation with a labeled local demo response from a loopback-only canned provider. No inference, paid API request or user credentials.",
   "inputs": {
-    "capture/app.py": "fb02a92fb65cf0246a5618ad5070190ea8b926d66148d9a84dd0ce1b3df3f2f5",
-    "capture/config.json": "eaf704c6b3c88ce880db1f82275d6e3deca907e0f63f3f456d5ca801a078195f",
+    "capture/app.py": "47c60a1cdf9092ed891390ff48ba8867417df0db67ac2aee90e23d2e24340b73",
+    "capture/config.json": "f471d6b1b91e6371a407899ba4019889d5fbf7e84ab6a1108ed4af9710a7ddbd",
     "capture/flake.lock": "e3750f7ba25d0b1971722cdd83b2f07e32528980a4d6a9a1ea55177747de5752",
-    "capture/flake.nix": "c2fba8c9b800f5f2ecfec74b2e8f86dd1d68fd0c9fdd6d16104876297ad7fad1",
+    "capture/flake.nix": "f06753950d11b9b94778f01861baef7d5c57fb78bb6896c2f93105eb0f000260",
+    "capture/provider.py": "7439bc71b65961b59f799b231f26b082e63af957ba0ce7a86c49633016a3398a",
+    "capture/review.md": "eab4a3ae509f01d72a9370f877cb7d69ceeb5418ad23645f465d9182d47f41ab",
     "palette/theme.json": "d735cf005e3b2807953226c0119e384f6f8a3d2b3167443371cb302a8c689cdb",
-    "port.json": "985af7aba637f10b655196c66b72495e9926894a0233f906fd8317e3aa09118a",
-    "scripts/capture.py": "1fefb763f00567b795b92388b29e3e8c3fd58bd0eefa9c2f31e43663cad7a308",
-    "themes/living-code-frost.yml": "17e0c035420194ce39f601d626513f8f42676ce30afde31716c1a2fa7b14a8fa",
-    "themes/living-code-night.yml": "aafe08f4e51935c7596e47ac2bba1c968eae8b3d7d11142145f85f7fa9f349de",
-    "themes/living-code-paper.yml": "6424255ee9915f43d54658d506deb3aebaa23ea3e3b449783772de9c1adc523c",
-    "themes/living-code-signal.yml": "a279c56aaa90d3899cb4fb2a46afe5f34be1b607bb550507458049bb40bdedee"
+    "port.json": "426547eb5b0e88bb4078df149662dd2b2db774d571ec3ae683be6cb643461ed6",
+    "scripts/capture.py": "ea56b3784525095d9175887431004ce5df674f17b45c7e5a8d0399aa68615c33",
+    "scripts/check-syntax.py": "cdf24892cf1a7b278a6b26be905da854e8ed56ad32a8b3f22ba6c9cc5ccd6428",
+    "styles/living_code_aider-0.1.0-py3-none-any.whl": "cef583467e4c8eca00d6c361091102ead59e0221d489dff011e0281748aff61f",
+    "test/fixtures/neovim-syntax.json": "0bec5a64dd6fce301114128adb678fea970e97dc71c2fd739b17a5134c3453c2",
+    "themes/living-code-frost.yml": "9a93723f734f45ba2a0d62d991fe0c8cbd589b8ef94690b0465c2363309f6c46",
+    "themes/living-code-night.yml": "1623a24bdc558f7fe183bb3e7f4ed12f08f4cf9fe83779d75e7e25daacfeac0f",
+    "themes/living-code-paper.yml": "cf150567f783d8172d0d8a70a84e9979b7c2203d975cfd99fb0933ddd293a493",
+    "themes/living-code-signal.yml": "1410e1ffb6dc6ce4360d785e84f84078340518e175ebf2c8f318985936e9b0a9"
   },
   "images": {
     "night": {
       "path": "images/night.png",
-      "sha256": "6ead47b6580d456bf110c72de53ec441ba57e9208d8ecf9584d98b7dc9de0b38",
+      "sha256": "90c171da0b55e1b95b6fb7148ae6d480e176bcdb1a6b59029d8d050613a7f79f",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#00a692",
         "#05080b",
+        "#50565b",
+        "#52d7c1",
+        "#747c80",
+        "#80b6d3",
         "#8acb83",
         "#9ba0a2",
+        "#bf91cd",
+        "#e18c5f",
         "#e2e9ee"
       ]
     },
     "frost": {
       "path": "images/frost.png",
-      "sha256": "861f6483402f0b12355066c30897859f2f4ea6c0ea6218ca9069db64020799c1",
+      "sha256": "84d86b5dfaab1cc8c9482379a8c8c35d030f9c88e9c5d1e268d7111014e8f6a8",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#0a1016",
         "#43a997",
+        "#50565b",
+        "#7d8489",
+        "#8ad5c6",
+        "#98bacd",
         "#9ba0a2",
         "#a2cb9d",
+        "#bc9ec6",
+        "#d49c80",
         "#e2e9ee"
       ]
     },
     "paper": {
       "path": "images/paper.png",
-      "sha256": "d1961cc2ae07d08d8f478eadfd04f11d46895abc33df52b37f31ccb273885f5d",
+      "sha256": "04addd0f406032958b80f70ea6e7c95703cba9152fedbcc2fe91ed620310b3cf",
       "application": "aider 0.86.1",
       "paletteColors": [
+        "#0f695e",
         "#12171a",
         "#187d6e",
+        "#2b6991",
         "#3b7a35",
         "#50565a",
+        "#6b7378",
+        "#81558e",
+        "#92999f",
+        "#a04f27",
         "#f4f7f9"
       ]
     },
     "signal": {
       "path": "images/signal.png",
-      "sha256": "3046df9d2b4dd0081346011215a9dfdf03814c34be8e0333558682eb92c67216",
+      "sha256": "93886a0e25b5f0b73757fed4acf9f492803a4017da9b3890138ed99f6f72a31b",
       "application": "aider 0.86.1",
       "paletteColors": [
         "#00a692",
         "#05080b",
+        "#50565b",
+        "#747c80",
         "#9ba0a2",
         "#c8cfd4",
         "#e2e9ee"

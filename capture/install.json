@@ -1,6 +1,10 @@
 {
   "downloads": [
     {
+      "source": "styles/living_code_aider-0.1.0-py3-none-any.whl",
+      "destination": "{config}/aider/themes/living_code_aider-0.1.0-py3-none-any.whl"
+    },
+    {
       "source": "themes/living-code-{flavor}.yml",
       "destination": "{config}/aider/themes/living-code-{flavor}.yml"
     }

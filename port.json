@@ -5,7 +5,7 @@
   "slug": "aider",
   "group": "AI & Agents",
   "emoji": "🛠️",
-  "description": "Living Code for Aider: native YAML colors for user and assistant messages, warnings, errors and completion-menu states.",
+  "description": "Living Code for Aider: native UI colors and Neovim-aligned code highlighting through a companion Pygments plugin.",
   "homepage": "https://aider.chat",
   "quick": "Install the native theme files",
   "aliases": [
@@ -22,7 +22,8 @@
     "themes/living-code-night.yml",
     "themes/living-code-frost.yml",
     "themes/living-code-paper.yml",
-    "themes/living-code-signal.yml"
+    "themes/living-code-signal.yml",
+    "styles/living_code_aider-0.1.0-py3-none-any.whl"
   ],
   "images": [
     { "flavor": "night", "path": "images/night.png", "alt": "Aider running Living Code Night" },

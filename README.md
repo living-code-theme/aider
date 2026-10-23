@@ -5,7 +5,7 @@
 
 # 🛠️ Living Code for Aider
 
-**Calm slate. Living color.**<br>Living Code for Aider: native YAML colors for user and assistant messages, warnings, errors and completion-menu states.
+**Calm slate. Living color.**<br>Living Code for Aider: native UI colors and Neovim-aligned code highlighting through a companion Pygments plugin.
 
 <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/00a692.svg" width="14" height="14" alt="teal #00a692"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/52d7c1.svg" width="14" height="14" alt="mint #52d7c1"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/9ae0dd.svg" width="14" height="14" alt="aqua #9ae0dd"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/80b6d3.svg" width="14" height="14" alt="steel #80b6d3"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/8acb83.svg" width="14" height="14" alt="moss #8acb83"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/f0be6d.svg" width="14" height="14" alt="amber #f0be6d"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/e18c5f.svg" width="14" height="14" alt="copper #e18c5f"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/e96560.svg" width="14" height="14" alt="flare #e96560"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/bf91cd.svg" width="14" height="14" alt="orchid #bf91cd"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/ddaec3.svg" width="14" height="14" alt="rose #ddaec3">
 
@@ -49,11 +49,15 @@ Select any preview to view the image at full size.
 
 ```sh
 flavor=night # night, frost, paper, or signal
+curl -fsSL --create-dirs -o "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living_code_aider-0.1.0-py3-none-any.whl" "https://raw.githubusercontent.com/living-code-theme/aider/main/styles/living_code_aider-0.1.0-py3-none-any.whl"
+uv tool inject aider-chat "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living_code_aider-0.1.0-py3-none-any.whl"
 curl -fsSL --create-dirs -o "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-$flavor.yml" "https://raw.githubusercontent.com/living-code-theme/aider/main/themes/living-code-$flavor.yml"
 aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-$flavor.yml"
 ```
 
-This uses a separate color-only config instead of overwriting `~/.aider.conf.yml`. To keep all your existing Aider settings active together, merge the nine color options from the downloaded file into your user or project config. Preserve credentials, model and editing settings.
+The block assumes Aider was installed with `uv tool`. For pipx, replace `uv tool inject aider-chat` with `pipx inject aider-chat`; for a pip/virtualenv installation, use that environment’s `python -m pip install` instead. The plugin must be installed in **Aider’s own Python environment**, not an unrelated Python. It registers all four styles through Pygments’ supported entry-point API and makes no network or model calls.
+
+This uses a separate theme config instead of overwriting `~/.aider.conf.yml`. To keep all your existing Aider settings active together, merge the nine UI color options **and `code-theme`** from the downloaded file into your user or project config. Preserve credentials, model and editing settings.
 
 ## Flavors
 
@@ -105,13 +109,15 @@ aider --config "${XDG_CONFIG_HOME:-$HOME/.config}/aider/themes/living-code-signa
 
 ## Configuration
 
-The files map exactly Aider’s nine documented `*-color` options. Do not combine them with `--dark-mode` or `--light-mode`, which replace these colors with Aider presets. This port intentionally leaves `code-theme` alone so it does not replace your syntax theme with an unrelated preset. Completion foreground/background and the selected entry are explicitly paired.
+Each YAML file sets Aider’s nine documented `*-color` options and selects the corresponding Living Code `code-theme`. Do not combine it with `--dark-mode`, `--light-mode` or an unrelated `--code-theme`, which replace these settings. Completion foreground/background and the selected entry are explicitly paired.
+
+The companion Pygments plugin uses the [Neovim port](https://github.com/living-code-theme/nvim/blob/main/lua/living-code/highlights.lua) as its syntax reference: keywords/builtins → mint, functions → aqua, strings → moss, numbers/literal constants → copper, types → steel, variables → foreground, operators/comments → muted slate, punctuation → subtle slate. Every flavor has its own role mapping, including restrained Signal and light Paper. Lexers still differ in which tokens they recognize; unclassified identifiers remain variables.
 
 ## Compatibility
 
-For Aider versions exposing the nine color flags listed in `test/fixtures/upstream.json`. This is a UI-color port, not a custom Pygments style. Aider’s rendered code blocks continue to use your configured `code-theme`; the terminal owns the full-screen background. Use a matching Living Code terminal theme for the rest of the palette. Tests parse native YAML and verify accepted flag names and semantic colors.
+Verified with Aider 0.86.1, Rich and Pygments 2.20.0. The wheel is pure Python, includes all four syntax styles, and uses Pygments’ public plugin API. The terminal owns the full-screen background; use a matching Living Code terminal theme. Tests validate YAML, wheel integrity and Neovim role parity; the native capture checks that Pygments and Rich actually resolve the installed Living Code style rather than silently falling back to Monokai/default.
 
-Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn.
+Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn. A loopback-only canned provider supplies the labeled, repository-owned local code-review demo; Aider renders the response itself. No private session, account, subscription or paid API call is needed.
 
 ## Contributing
 

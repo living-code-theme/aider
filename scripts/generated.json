@@ -2,5 +2,9 @@
   "themes/living-code-night.yml",
   "themes/living-code-frost.yml",
   "themes/living-code-paper.yml",
-  "themes/living-code-signal.yml"
+  "themes/living-code-signal.yml",
+  "styles/living_code_aider.py",
+  "styles/living_code_aider-0.1.0.dist-info/METADATA",
+  "styles/living_code_aider-0.1.0.dist-info/WHEEL",
+  "styles/living_code_aider-0.1.0.dist-info/entry_points.txt"
 ]

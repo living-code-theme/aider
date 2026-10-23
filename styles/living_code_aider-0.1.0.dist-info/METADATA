@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: living-code-aider
+Version: 0.1.0
+Summary: Living Code Pygments styles for Aider
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: Pygments>=2.18
+
+Living Code syntax styles for Aider, aligned with the Neovim port.

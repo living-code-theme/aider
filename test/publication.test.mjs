@@ -57,9 +57,16 @@ fs.mkdirSync(path.dirname(target), {recursive:true});
 fs.copyFileSync(path.join(process.env.PORT_ROOT, source), target);
 fs.appendFileSync(process.env.INSTALL_LOG, JSON.stringify({source, destination:target}) + '\\n');
 `, { mode: 0o755 });
-  for (const command of ["aider", "btm", "gitui", "codex", "pi", "posting", "nu"]) {
+  for (const command of ["uv", "aider", "btm", "gitui", "codex", "pi", "posting", "nu"]) {
     await writeFile(join(bin, command), '#!/bin/sh\n' + (command === "nu" ? 'printf "%s\\n" "$XDG_CONFIG_HOME/nushell"\n' : command === "posting" ? 'if [ "$1" = locate ]; then printf "Themes directory:\\n%s\\n" "$XDG_DATA_HOME/posting/themes"; fi\n' : 'exit 0\n'), { mode: 0o755 });
   }
+  await writeFile(join(bin, "uv"), `#!${process.execPath}
+const assert = require('node:assert/strict'), fs = require('node:fs');
+const args = process.argv.slice(2);
+assert.deepEqual(args.slice(0, 3), ['tool', 'inject', 'aider-chat']);
+assert.equal(args.length, 4);
+assert.equal(fs.readFileSync(args[3]).subarray(0, 4).toString('hex'), '504b0304');
+`, { mode: 0o755 });
   const existing = [join(variables.claude, "settings.json"), join(variables.codex, "config.toml"),
     join(variables.herdr, "config.toml"), join(variables.docker, "config.yml"), join(home, ".aider.conf.yml"),
     join(home, ".gemini/settings.json"), join(variables.config, "bottom/bottom.toml"),

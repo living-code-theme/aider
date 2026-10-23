@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "scene": "Aider native command/help UI in a tiny fixture Git repository. No model request.",
+  "scene": "Aider native code-review conversation with a labeled local demo response from a loopback-only canned provider. No inference, paid API request or user credentials.",
   "versionCommand": [
     "aider",
     "--version"
   ],
-  "fixtures": []
+  "fixtures": ["capture/review.md", "capture/provider.py", "scripts/check-syntax.py", "test/fixtures/neovim-syntax.json"]
 }

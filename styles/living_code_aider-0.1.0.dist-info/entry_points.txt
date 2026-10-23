@@ -1,0 +1,5 @@
+[pygments.styles]
+living-code-night = living_code_aider:NightStyle
+living-code-frost = living_code_aider:FrostStyle
+living-code-paper = living_code_aider:PaperStyle
+living-code-signal = living_code_aider:SignalStyle
